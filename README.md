@@ -11,6 +11,10 @@ docker-compose up -d
 
 ```
 
+## Sample how to run
+
+![How to run](how-to-run.gif)
+
 To stop the instance currently running:
 ```
 docker-compose stop
