@@ -1,29 +1,22 @@
 version: '3'
 
 services:
-   db:
+   oracledb:
      image: wnameless/oracle-xe-11g
      restart: always
-     environment:
-       ORACLE_ALLOW_REMOTE: 'false'
      ports:
-      - 1525:1521
-     #- 1522:22
+      - "1521:1521"
 
-   php7-oci8:
+   php7-with-oci8:
      depends_on:
-       - db
+       - oracledb
      image: adrianharabula/php7-with-oci8
      links:
-      - db
+      - oracledb
      volumes:
       - ./www:/var/www/html
-     environment:
-       DB_HOST: db:1525
-       #DB_USER: system
-       #DB_PASSWORD: oracle
      ports:
-      - 81:80
+      - "80:80"
 
 volumes:
     www:

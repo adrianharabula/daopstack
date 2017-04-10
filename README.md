@@ -29,13 +29,13 @@ docker-compose down
 To access the database with Oracle SQL Developer use these:
 ```
 host:localhost
-port:1525 # Warning: default port is 1521, but this way it won't interfere if there is already a oracle db installed on your system, you can run both db at the same time
+port:1521
 user:system
 pass:oracle
 ```
 
 ## Test
-Test connectivity with database with [localhost:81/ocitest.php](http://localhost:81/ocitest.php)
+Test connectivity with database with [localhost/ocitest.php](http://localhost/ocitest.php)
 
 ## More info
 It uses the following images, click on the links for more info about them:
