@@ -2,7 +2,7 @@ version: '3'
 
 services:
    oracledb:
-     image: wnameless/oracle-xe-11g
+     image: wnameless/oracle-xe-11g-r2
      restart: always
      ports:
       - "1521:1521"
